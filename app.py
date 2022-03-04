@@ -12,14 +12,10 @@ app.register_blueprint(attendees, url_prefix='/api')
 
 @app.before_request 
 def before_request():
-    """Connect to the db before each request"""
-    print("you should see this before each request") 
     models.DATABASE.connect()
 
     @after_this_request 
     def after_request(response):
-        """Close the db connetion after each request"""
-        print("you should see this after each request")
         models.DATABASE.close()
         return response 
 

@@ -109,6 +109,6 @@ def get_by_id(id):
     ), 200
 
 ##SEARCH BY ANY PART OF NAME
-@attendees.route('/<partofname>', methods=['GET'])
-def get_by_parts(partofname):
+# @attendees.route('/<partofname>', methods=['GET'])
+#     def get_by_parts(partofname):
     
